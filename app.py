@@ -1,3 +1,4 @@
+# app.py
 from flask import Flask, request, jsonify
 from g4f.client import Client
 
@@ -27,4 +28,4 @@ def gpt_chat():
 
 # Start the Flask app
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)  # Entry point
