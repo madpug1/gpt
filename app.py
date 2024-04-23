@@ -1,11 +1,14 @@
-# app.py
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from g4f.client import Client
 
 # Create the Flask app
 app = Flask(__name__)
 
-# Define a route for the API endpoint
+# Enable CORS for all routes
+CORS(app)
+
+# Define a route for the GPT-3.5-turbo chat
 @app.route('/gpt-chat', methods=['POST'])
 def gpt_chat():
     # Get the JSON data from the request
@@ -28,4 +31,4 @@ def gpt_chat():
 
 # Start the Flask app
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)  # Entry point
+    app.run(debug=True, host='0.0.0.0', port=5000)
