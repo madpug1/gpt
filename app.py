@@ -21,7 +21,7 @@ def gpt_chat():
     # Create a Client instance and get the response from GPT-3.5-turbo
     client = Client()
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=[{"role": "user", "content": data['message']}]
     )
 
